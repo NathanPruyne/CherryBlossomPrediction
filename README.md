@@ -3,7 +3,7 @@ For George Mason University Cherry Blossom Prediction Competition 2023
 
 # Installation
 
-To install required Python libraries:
+To install required Python libraries, run the following script in a command shell. A previous Python installation is required:
 
 `pip install torch numpy pandas scipy tqdm`
 
