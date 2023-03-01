@@ -23,7 +23,7 @@ def train(epochs, model_file):
     val_dataset = BlossomDataset(splits['val'])
     val_loader = DataLoader(val_dataset, batch_size=5, shuffle=True)
 
-    model = Convolution(input_channels=4).to(device=device)
+    model = Convolution().to(device=device)
     model.train()
 
     loss_func = torch.nn.MSELoss() #Use a mean squared error loss
