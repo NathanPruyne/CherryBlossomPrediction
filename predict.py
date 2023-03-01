@@ -43,6 +43,9 @@ def predict(model_file, output_dir, dataset=None, test_set=False, final_format=F
         for input in tqdm(inputs, desc="Predicting: "):
             outputs.append(model(input).squeeze(0)) #Remove batch dimension
 
+        if not os.path.isdir(output_dir):
+            os.makedirs(output_dir)
+
         if final_format:
             years = np.arange(2023, 2033)
             final = np.zeros((10, 5))
